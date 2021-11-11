@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+    <TableLayout
+            android:layout_width="400dp"
+            android:layout_height="wrap_content" android:paddingLeft="16px" tools:ignore="MissingConstraints"
+    >
+
+        <TableRow android:layout_width="match_parent" android:layout_height="match_parent">
+            <TextView
+                    android:text="Local"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" android:id="@+id/textViewLocal"/>
+            <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:inputType="textPersonName"
+                    android:text=""
+                    android:ems="10"
+                    android:id="@+id/editTextLocal"/>
+        </TableRow>
+        <TableRow android:layout_width="match_parent" android:layout_height="match_parent">
+            <TextView
+                    android:text="Latitude"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" android:id="@+id/textViewLatitude"/>
+            <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:inputType="numberDecimal|numberSigned"
+                    android:ems="10"
+                    android:id="@+id/editTextLatitude"/>
+        </TableRow>
+        <TableRow android:layout_width="match_parent" android:layout_height="match_parent">
+            <TextView
+                    android:text="Longitude"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" android:id="@+id/textViewLongitude"/>
+            <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberDecimal|numberSigned"
+                    android:ems="10"
+                    android:id="@+id/editTextLongitude"/>
+        </TableRow>
+        <TableRow android:layout_width="match_parent" android:layout_height="match_parent">
+            <Button
+                    android:text="Go Maps"
+                    android:layout_width="match_parent"
+                    android:onClick="goMaps"
+                    android:layout_height="wrap_content" android:id="@+id/buttonGoMaps"
+                    android:layout_marginRight="20px" android:layout_marginEnd="20px" android:maxWidth="10dp"/>
+            <Button
+                    android:text="Exit"
+                    android:layout_width="99dp"
+                    android:onClick="exit"
+                    android:layout_height="wrap_content" android:id="@+id/buttonExit"
+                    android:layout_marginRight="20px" android:layout_marginEnd="20px"/>
+        </TableRow>
+        <TableRow android:layout_width="match_parent" android:layout_height="match_parent">
+            <Button
+                    android:id="@+id/btn_add"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/input_label"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginRight="20px" android:layout_marginEnd="20px"
+                    android:text="Add item"
+                    android:onClick="addLocal"/>
+        </TableRow>
+        <androidx.constraintlayout.widget.ConstraintLayout android:layout_width="match_parent"
+                                                           android:layout_height="match_parent"
+                                                           android:id="@+id/tableRow">
+            <Spinner
+                    android:id="@+id/spinner"
+                    android:layout_width="350dp"
+                    android:layout_height="wrap_content"
+                    android:dropDownWidth="match_parent"
+                    app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="6dp"
+                    app:layout_constraintBottom_toBottomOf="parent" android:layout_marginStart="6dp"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </TableLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
