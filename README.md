@@ -1,3 +1,3 @@
 # GoogleMpasSQL-Java
 
-It's a college homework
+It's a college homework to android
